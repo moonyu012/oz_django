@@ -22,7 +22,6 @@ from fake_db import user_db
 
 _db = user_db
 
-
 def user_list(request):
     names = [{'id': key, 'name': value['이름']} for key, value in _db.items()]
     return render(request, 'user_list.html', {'data': names})
